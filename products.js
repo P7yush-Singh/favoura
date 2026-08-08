@@ -1,9 +1,9 @@
 const products = [
     {
-        id: "classic-milk",
-        name: "Classic Milk Chocolate",
-        category: "milk",
-        price: 249,
+        id: "belgian-chocolate",
+        name: "Belgian chocolate",
+        category: "dark",
+        price: 299,
         image: "images/Belgian-chocolate.png",
         description: "Smooth and creamy milk chocolate crafted for everyday indulgence.",
         featured: true
@@ -19,13 +19,13 @@ const products = [
         featured: true
     },
 
-    {
-        id: "dark-chocolate",
-        name: "Chocolate Box",
-        category: "dark",
-        price: 349,
-        image: "images/chocolate-box.jpeg",
-        description: "Deep and intense dark chocolate created for true chocolate lovers.",
-        featured: true
-    },
+    // {
+    //     id: "choco-box",
+    //     name: "Chocolate Box",
+    //     category: "gifts",
+    //     price: 349,
+    //     image: "images/chocolate-box.jpeg",
+    //     description: "Deep and intense dark chocolate created for true chocolate lovers.",
+    //     featured: true
+    // },
 ];

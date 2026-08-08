@@ -1,5 +1,5 @@
 const FAVOURA_CONFIG = {
-    whatsappNumber: "+919873828776"
+    whatsappNumber: "+919968500862"
 };
 
 

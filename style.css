@@ -366,16 +366,21 @@ button,
 
 .product-card {
     position: relative;
-    border-radius: 22px;
+    border-radius: 18px;
     overflow: hidden;
     background: linear-gradient(180deg, #fffdf9 0%, #fdf6eb 100%);
-    box-shadow: 0 10px 30px rgba(50, 24, 18, 0.06);
-    border: 1px solid rgba(50, 24, 18, 0.06);
+    box-shadow: 0 10px 24px rgba(50, 24, 18, 0.06);
+    border: 1px solid rgba(50, 24, 18, 0.08);
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 38px rgba(50, 24, 18, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(50, 24, 18, 0.1);
+}
+
+.product-card a {
+    display: block;
+    text-decoration: none;
 }
 
 .product-image-wrapper {
@@ -431,7 +436,10 @@ button,
 }
 
 .product-info {
-    padding: 22px 22px 24px;
+    padding: 18px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .product-category {
@@ -450,28 +458,30 @@ button,
 .product-name {
     font-family: "Playfair Display", serif;
 
-    font-size: 1.24rem;
+    font-size: 1.16rem;
 
-    margin: 0 0 8px;
+    margin: 0;
     color: #321812;
 }
 
 .product-description {
     color: #806c60;
 
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 
-    line-height: 1.7;
+    line-height: 1.65;
 
-    margin: 0 0 12px;
+    margin: 0;
 }
 
 .product-price {
-    font-size: 1rem;
+    font-size: 0.96rem;
 
     font-weight: 700;
-    margin: 0;
+    margin: 4px 0 0;
     color: #321812;
+    padding-top: 8px;
+    border-top: 1px solid rgba(50, 24, 18, 0.08);
 }
 
 

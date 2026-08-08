@@ -84,7 +84,7 @@ body {
 
 .mobile-link {
     font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #321812;
 }
 
@@ -216,13 +216,13 @@ body {
 .section-heading {
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(2.7rem, 5vw, 4.5rem);
+    font-size: clamp(2.1rem, 3.4vw, 3rem);
 
-    line-height: 1.05;
+    line-height: 1.1;
 
     font-weight: 500;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .section-text {
@@ -230,9 +230,9 @@ body {
 
     color: #806c60;
 
-    font-size: 1.05rem;
+    font-size: 0.98rem;
 
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 .underline-link {
@@ -334,7 +334,7 @@ body {
 .product-name {
     font-family: "Playfair Display", serif;
 
-    font-size: 1.65rem;
+    font-size: 1.35rem;
 
     margin-top: 5px;
 }
@@ -391,7 +391,7 @@ body {
 .feature-card h3 {
     font-family: "Playfair Display", serif;
 
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 
     margin-bottom: 14px;
 }
@@ -437,7 +437,7 @@ body {
 .review-card p {
     font-family: "Playfair Display", serif;
 
-    font-size: 1.25rem;
+    font-size: 1.05rem;
 
     line-height: 1.6;
 }

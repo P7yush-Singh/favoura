@@ -89,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 .map(product => createProductCard(product))
                 .join("");
 
+        initReveal();
+
     }
 
 

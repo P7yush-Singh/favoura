@@ -21,10 +21,10 @@ const products = [
 
     {
         id: "Belgian",
-        name: "Chocolate Box",
+        name: "Belgian",
         category: "milk",
         price: 299,
-        image: "images/Belgian-chocolate.png",
+        image: "images/Belgian.png",
         description: "Deep and intense dark chocolate created for true chocolate lovers.",
         featured: true
     },

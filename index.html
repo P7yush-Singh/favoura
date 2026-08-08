@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favoura — Crafted for Chocolate Lovers</title>
+
+    <meta
+        name="description"
+        content="Discover Favoura's premium handcrafted chocolates, made for moments worth celebrating."
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chocolate: "#321812",
+                        cocoa: "#4A281D",
+                        cream: "#F8F2E9",
+                        vanilla: "#FFFDF8",
+                        gold: "#B9915B",
+                        muted: "#806C60"
+                    },
+
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-vanilla text-chocolate font-sans">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="h-24 flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+
+                    <img
+                        src="images/logo.jpg"
+                        alt="Favoura"
+                        class="w-12 h-12 object-contain"
+                    >
+
+                    <span class="font-display text-2xl tracking-wide">
+                        Favoura
+                    </span>
+
+                </a>
+
+
+                <!-- Desktop Navigation -->
+
+                <div class="hidden md:flex items-center gap-10">
+
+                    <a
+                        href="index.html"
+                        class="nav-link active"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="products.html"
+                        class="nav-link"
+                    >
+                        Chocolates
+                    </a>
+
+                    <a
+                        href="#story"
+                        class="nav-link"
+                    >
+                        Our Story
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="nav-link"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Desktop CTA -->
+
+                <a
+                    href="products.html"
+                    class="hidden md:inline-flex premium-button"
+                >
+                    Explore Chocolates
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button
+                    id="menuButton"
+                    class="md:hidden w-11 h-11 flex items-center justify-center border border-chocolate/20 rounded-full"
+                    aria-label="Open menu"
+                >
+                    <span class="text-xl">☰</span>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            id="mobileMenu"
+            class="mobile-menu md:hidden bg-vanilla border-t border-chocolate/10"
+        >
+
+            <div class="px-6 py-8 flex flex-col gap-6">
+
+                <a href="index.html" class="mobile-link">
+                    Home
+                </a>
+
+                <a href="products.html" class="mobile-link">
+                    Chocolates
+                </a>
+
+                <a href="#story" class="mobile-link">
+                    Our Story
+                </a>
+
+                <a href="contact.html" class="mobile-link">
+                    Contact
+                </a>
+
+                <a
+                    href="products.html"
+                    class="premium-button text-center"
+                >
+                    Explore Chocolates
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section
+            class="relative min-h-screen bg-cream overflow-hidden flex items-center pt-24"
+        >
+
+            <!-- Decorative Circle -->
+
+            <div
+                class="absolute -right-40 top-20 w-[500px] h-[500px] rounded-full bg-gold/10 blur-3xl"
+            ></div>
+
+
+            <div
+                class="max-w-7xl mx-auto px-6 lg:px-10 w-full"
+            >
+
+                <div
+                    class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+                >
+
+                    <!-- Hero Content -->
+
+                    <div class="hero-content">
+
+                        <p class="uppercase tracking-[0.3em] text-sm text-gold font-semibold mb-6">
+                            Crafted With Passion
+                        </p>
+
+
+                        <h1
+                            class="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] font-medium"
+                        >
+                            A Little More
+                            <span class="italic">Chocolate.</span>
+                            <br>
+
+                            A Lot More
+                            <span class="italic">Happiness.</span>
+                        </h1>
+
+
+                        <p
+                            class="mt-8 max-w-lg text-lg leading-8 text-muted"
+                        >
+                            Discover indulgent chocolates crafted to turn
+                            ordinary moments into something memorable.
+                        </p>
+
+
+                        <div class="mt-10 flex flex-wrap gap-4">
+
+                            <a
+                                href="products.html"
+                                class="premium-button"
+                            >
+                                Explore Chocolates
+                            </a>
+
+
+                            <a
+                                href="#story"
+                                class="secondary-button"
+                            >
+                                Discover Our Story
+                            </a>
+
+                        </div>
+
+
+                        <!-- Small Trust -->
+
+                        <div
+                            class="mt-12 flex items-center gap-8 text-sm text-muted"
+                        >
+
+                            <div>
+                                <strong class="block text-chocolate text-xl font-display">
+                                    100%
+                                </strong>
+                                Premium
+                            </div>
+
+                            <div class="w-px h-10 bg-chocolate/10"></div>
+
+                            <div>
+                                <strong class="block text-chocolate text-xl font-display">
+                                    Fresh
+                                </strong>
+                                Every Day
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hero Image -->
+
+                    <div class="relative hero-image">
+
+                        <div
+                            class="absolute inset-8 rounded-[50%] bg-gold/10"
+                        ></div>
+
+
+                        <div
+                            class="relative z-10"
+                        >
+
+                            <img
+                                src="images/white-chocolate.png"
+                                alt="Favoura premium chocolate"
+                                class="hero-product-image"
+                            >
+
+                        </div>
+
+
+                        <!-- Floating Badge -->
+
+                        <div
+                            class="absolute z-20 bottom-8 left-0 md:left-5 bg-white/90 backdrop-blur-md px-6 py-5 rounded-2xl shadow-xl"
+                        >
+
+                            <p class="text-xs uppercase tracking-widest text-muted">
+                                Made for
+                            </p>
+
+                            <p class="font-display text-xl mt-1">
+                                Sweet Moments
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="py-24 lg:py-32">
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+
+                <p class="section-label">
+                    The Favoura Experience
+                </p>
+
+                <h2 class="section-heading">
+                    Chocolate is not just a treat.
+                    <span class="italic">It's a feeling.</span>
+                </h2>
+
+                <p class="section-text mx-auto">
+                    From the first bite to the last, Favoura is made to
+                    create little moments of happiness. Every chocolate
+                    is crafted with care, passion and a love for indulgence.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED PRODUCTS ================= -->
+
+        <section class="py-24 bg-cream">
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+                >
+
+                    <div>
+
+                        <p class="section-label">
+                            Our Collection
+                        </p>
+
+                        <h2 class="section-heading !mb-0">
+                            Our Favourites
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="products.html"
+                        class="underline-link"
+                    >
+                        View All Chocolates →
+                    </a>
+
+                </div>
+
+
+                <!-- Products -->
+
+                <div
+                    id="featuredProducts"
+                    class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <!-- JavaScript renders products -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY FAVOURA ================= -->
+
+        <section class="py-24 lg:py-32">
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+                <div class="text-center max-w-2xl mx-auto mb-16">
+
+                    <p class="section-label">
+                        Why Favoura
+                    </p>
+
+                    <h2 class="section-heading">
+                        Crafted with
+                        <span class="italic">intention.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Premium Ingredients
+                        </h3>
+
+                        <p>
+                            Carefully selected ingredients for a
+                            rich and memorable chocolate experience.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Crafted With Care
+                        </h3>
+
+                        <p>
+                            Every chocolate is created with attention
+                            to quality, texture and taste.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Made For Moments
+                        </h3>
+
+                        <p>
+                            Perfect for celebrations, gifting or
+                            simply treating yourself.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Pure Indulgence
+                        </h3>
+
+                        <p>
+                            A luxurious chocolate experience designed
+                            to make every bite special.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORY ================= -->
+
+        <section
+            id="story"
+            class="py-24 lg:py-32 bg-chocolate text-white"
+        >
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+                <div
+                    class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center"
+                >
+
+                    <div>
+
+                        <p class="text-gold uppercase tracking-[0.3em] text-sm font-semibold mb-6">
+                            Our Story
+                        </p>
+
+                        <h2 class="font-display text-5xl md:text-6xl leading-tight">
+                            Chocolate made
+                            <span class="italic">with feeling.</span>
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-white/70 text-lg leading-8">
+                            At Favoura, we believe chocolate is more than
+                            just a sweet treat. It is a way to celebrate
+                            moments, share happiness and create memories.
+                        </p>
+
+                        <p class="text-white/70 text-lg leading-8 mt-6">
+                            Every piece is crafted with passion, quality
+                            and a love for chocolate.
+                        </p>
+
+
+                        <a
+                            href="products.html"
+                            class="inline-flex mt-8 text-gold border-b border-gold pb-2"
+                        >
+                            Explore Our Chocolates →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section class="py-24 lg:py-32 bg-cream">
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+                <div class="text-center mb-16">
+
+                    <p class="section-label">
+                        Kind Words
+                    </p>
+
+                    <h2 class="section-heading">
+                        Loved by chocolate
+                        <span class="italic">lovers.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <div class="review-card">
+
+                        <div class="text-gold text-xl mb-6">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Absolutely delicious. The chocolate was
+                            rich, smooth and beautifully packaged."
+                        </p>
+
+                        <div class="review-author">
+                            — Aanya
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-card">
+
+                        <div class="text-gold text-xl mb-6">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "The perfect chocolate for gifting.
+                            Beautiful presentation and amazing taste."
+                        </p>
+
+                        <div class="review-author">
+                            — Riya
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-card">
+
+                        <div class="text-gold text-xl mb-6">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "One bite and I was hooked. Definitely
+                            ordering again!"
+                        </p>
+
+                        <div class="review-author">
+                            — Arjun
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="py-24 lg:py-32 text-center">
+
+            <div class="max-w-3xl mx-auto px-6">
+
+                <p class="section-label">
+                    Your Sweet Moment
+                </p>
+
+                <h2 class="font-display text-5xl md:text-7xl leading-tight">
+                    Your next chocolate
+                    <span class="italic">moment</span>
+                    starts here.
+                </h2>
+
+                <p class="section-text mx-auto mt-6">
+                    Discover something delicious from the Favoura collection.
+                </p>
+
+                <a
+                    href="products.html"
+                    class="premium-button inline-flex mt-8"
+                >
+                    Shop Chocolates
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-chocolate text-white">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div>
+
+                    <div class="flex items-center gap-3 mb-5">
+
+                        <img
+                            src="images/logo.jpg"
+                            alt="Favoura"
+                            class="w-12 h-12 object-contain"
+                        >
+
+                        <span class="font-display text-2xl">
+                            Favoura
+                        </span>
+
+                    </div>
+
+                    <p class="text-white/60 leading-7">
+                        Premium chocolate crafted for memorable moments.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Explore
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Chocolates</a>
+                        <a href="#story">Our Story</a>
+                        <a href="contact.html">Contact</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="#">
+                            +91 XXXXX XXXXX
+                        </a>
+
+                        <a href="#">
+                            hello@favoura.com
+                        </a>
+
+                        <span>
+                            New Delhi, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Follow Us
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                        <a href="#">
+                            WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="border-t border-white/10 mt-14 pt-8">
+
+                <p class="text-sm text-white/40">
+                    © 2026 Favoura. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

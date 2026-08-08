@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Favoura — Contact</title>
+
+    <meta
+        name="description"
+        content="Get in touch with Favoura."
+    >
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chocolate: "#321812",
+                        cocoa: "#4A281D",
+                        cream: "#F8F2E9",
+                        vanilla: "#FFFDF8",
+                        gold: "#B9915B",
+                        muted: "#806C60"
+                    },
+
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="bg-vanilla text-chocolate font-sans">
+
+
+    <!-- NAVBAR -->
+
+    <header
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 bg-vanilla/95 backdrop-blur-md"
+    >
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="h-24 flex items-center justify-between">
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <img
+                        src="images/logo.jpg"
+                        alt="Favoura"
+                        class="w-12 h-12 object-contain"
+                    >
+
+                    <span class="font-display text-2xl">
+                        Favoura
+                    </span>
+
+                </a>
+
+
+                <div class="hidden md:flex items-center gap-10">
+
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="products.html" class="nav-link">
+                        Chocolates
+                    </a>
+
+                    <a href="index.html#story" class="nav-link">
+                        Our Story
+                    </a>
+
+                    <a href="contact.html" class="nav-link active">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="products.html"
+                    class="hidden md:inline-flex premium-button"
+                >
+                    Explore Chocolates
+                </a>
+
+
+                <button
+                    id="menuButton"
+                    class="md:hidden w-11 h-11 flex items-center justify-center border border-chocolate/20 rounded-full"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <div
+            id="mobileMenu"
+            class="mobile-menu md:hidden bg-vanilla border-t border-chocolate/10"
+        >
+
+            <div class="px-6 py-8 flex flex-col gap-6">
+
+                <a href="index.html" class="mobile-link">
+                    Home
+                </a>
+
+                <a href="products.html" class="mobile-link">
+                    Chocolates
+                </a>
+
+                <a href="index.html#story" class="mobile-link">
+                    Our Story
+                </a>
+
+                <a href="contact.html" class="mobile-link">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="pt-40 pb-24 bg-cream">
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+
+                <p class="section-label">
+                    We'd Love To Hear From You
+                </p>
+
+                <h1 class="section-heading">
+                    Let's Talk
+                    <span class="italic">
+                        Chocolate.
+                    </span>
+                </h1>
+
+                <p class="section-text mx-auto">
+                    Have a question, want to place an order,
+                    or simply want to say hello?
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="py-20 lg:py-28">
+
+            <div
+                class="max-w-6xl mx-auto px-6 lg:px-10"
+            >
+
+                <div
+                    class="grid lg:grid-cols-2 gap-14"
+                >
+
+
+                    <!-- INFORMATION -->
+
+                    <div>
+
+                        <p class="section-label">
+                            Get In Touch
+                        </p>
+
+                        <h2
+                            class="font-display text-5xl"
+                        >
+                            We're here for
+                            <span class="italic">
+                                you.
+                            </span>
+                        </h2>
+
+
+                        <div class="mt-12 space-y-8">
+
+
+                            <div>
+
+                                <p class="contact-label">
+                                    Phone
+                                </p>
+
+                                <p class="contact-value">
+                                    +91 9873828776
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="contact-label">
+                                    Email
+                                </p>
+
+                                <p class="contact-value">
+                                    hello@favoura.com
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="contact-label">
+                                    Location
+                                </p>
+
+                                <p class="contact-value">
+                                    New Delhi, India
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="contact-label">
+                                    Follow
+                                </p>
+
+                                <div class="flex gap-5 mt-3">
+
+                                    <a href="#" class="social-link">
+                                        Instagram
+                                    </a>
+
+                                    <a href="#" class="social-link">
+                                        Facebook
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- WHATSAPP -->
+
+                        <a
+                            href="#"
+                            id="contactWhatsapp"
+                            class="premium-button mt-12"
+                        >
+                            Chat on WhatsApp →
+                        </a>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <div
+                        class="bg-cream p-7 md:p-10"
+                    >
+
+                        <p class="section-label">
+                            Send A Message
+                        </p>
+
+                        <h2 class="font-display text-3xl">
+                            Tell us what's on your mind.
+                        </h2>
+
+
+                        <form
+                            id="contactForm"
+                            class="mt-8 space-y-5"
+                        >
+
+                            <div>
+
+                                <label class="form-label">
+                                    Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    class="form-input"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="form-label">
+                                    Email *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    class="form-input"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="form-label">
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="contactPhone"
+                                    class="form-input"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="form-label">
+                                    Message *
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    rows="5"
+                                    class="form-input resize-none"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="premium-button w-full"
+                            >
+                                Send Message
+                            </button>
+
+
+                            <p
+                                id="contactSuccess"
+                                class="hidden text-center text-sm text-green-700"
+                            >
+                                Thank you! Your message has been recorded.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-chocolate text-white">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14">
+
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <img
+                            src="images/logo.jpg"
+                            alt="Favoura"
+                            class="w-11 h-11 object-contain"
+                        >
+
+                        <span class="font-display text-2xl">
+                            Favoura
+                        </span>
+
+                    </div>
+
+                    <p class="text-white/50 mt-4">
+                        Premium chocolate crafted for memorable moments.
+                    </p>
+
+                </div>
+
+
+                <div class="flex gap-8 text-sm text-white/60">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="products.html">
+                        Chocolates
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+
+        const CONTACT_WHATSAPP =
+            "919873828776";
+
+
+        const contactWhatsapp =
+            document.getElementById("contactWhatsapp");
+
+
+        if (contactWhatsapp) {
+
+            contactWhatsapp.href =
+                `https://wa.me/${CONTACT_WHATSAPP}`;
+
+        }
+
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        if (contactForm) {
+
+            contactForm.addEventListener(
+                "submit",
+                event => {
+
+                    event.preventDefault();
+
+
+                    const success =
+                        document.getElementById(
+                            "contactSuccess"
+                        );
+
+
+                    success.classList.remove("hidden");
+
+
+                    contactForm.reset();
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

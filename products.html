@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favoura — Our Chocolates</title>
+
+    <meta
+        name="description"
+        content="Explore the complete Favoura chocolate collection."
+    >
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chocolate: "#321812",
+                        cocoa: "#4A281D",
+                        cream: "#F8F2E9",
+                        vanilla: "#FFFDF8",
+                        gold: "#B9915B",
+                        muted: "#806C60"
+                    },
+
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="bg-vanilla text-chocolate font-sans">
+
+
+    <!-- NAVBAR -->
+
+    <header
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 bg-vanilla/95 backdrop-blur-md"
+    >
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10">
+
+            <div class="h-24 flex items-center justify-between">
+
+                <a href="index.html" class="flex items-center gap-3">
+
+                    <img
+                        src="images/logo.jpg"
+                        alt="Favoura"
+                        class="w-12 h-12 object-contain"
+                    >
+
+                    <span class="font-display text-2xl">
+                        Favoura
+                    </span>
+
+                </a>
+
+
+                <div class="hidden md:flex items-center gap-10">
+
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+
+                    <a href="products.html" class="nav-link active">
+                        Chocolates
+                    </a>
+
+                    <a href="index.html#story" class="nav-link">
+                        Our Story
+                    </a>
+
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="#products"
+                    class="hidden md:inline-flex premium-button"
+                >
+                    Explore Collection
+                </a>
+
+
+                <button
+                    id="menuButton"
+                    class="md:hidden w-11 h-11 flex items-center justify-center border border-chocolate/20 rounded-full"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            id="mobileMenu"
+            class="mobile-menu md:hidden bg-vanilla border-t border-chocolate/10"
+        >
+
+            <div class="px-6 py-8 flex flex-col gap-6">
+
+                <a href="index.html" class="mobile-link">
+                    Home
+                </a>
+
+                <a href="products.html" class="mobile-link">
+                    Chocolates
+                </a>
+
+                <a href="index.html#story" class="mobile-link">
+                    Our Story
+                </a>
+
+                <a href="contact.html" class="mobile-link">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section
+            class="pt-40 pb-20 bg-cream"
+        >
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+
+                <p class="section-label">
+                    The Favoura Collection
+                </p>
+
+                <h1 class="section-heading">
+                    Find your
+                    <span class="italic">
+                        favourite.
+                    </span>
+                </h1>
+
+                <p class="section-text mx-auto">
+                    Explore chocolates crafted for every craving,
+                    celebration and little moment of happiness.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+
+        <section
+            id="products"
+            class="py-20 lg:py-28"
+        >
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+
+                <!-- FILTER -->
+
+                <div
+                    id="categoryFilters"
+                    class="flex flex-wrap justify-center gap-3 mb-16"
+                >
+
+                    <button
+                        class="filter-button active"
+                        data-category="all"
+                    >
+                        All Chocolates
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-category="milk"
+                    >
+                        Milk
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-category="dark"
+                    >
+                        Dark
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-category="white"
+                    >
+                        White
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-category="gift"
+                    >
+                        Gifts
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCT COUNT -->
+
+                <div class="flex justify-between items-center mb-8">
+
+                    <p
+                        id="productCount"
+                        class="text-sm text-muted"
+                    ></p>
+
+                    <p class="text-sm text-muted">
+                        Handcrafted with care
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT GRID -->
+
+                <div
+                    id="productGrid"
+                    class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14"
+                >
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    id="emptyProducts"
+                    class="hidden text-center py-20"
+                >
+
+                    <h2 class="font-display text-3xl">
+                        No chocolates found
+                    </h2>
+
+                    <p class="text-muted mt-3">
+                        Try another category.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="py-24 bg-cream text-center">
+
+            <div class="max-w-3xl mx-auto px-6">
+
+                <p class="section-label">
+                    Made To Be Shared
+                </p>
+
+                <h2 class="font-display text-5xl md:text-6xl">
+                    Every moment deserves
+                    <span class="italic">
+                        chocolate.
+                    </span>
+                </h2>
+
+                <p class="section-text mx-auto mt-6">
+                    Find something delicious for yourself or someone special.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-chocolate text-white">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div>
+
+                    <div class="flex items-center gap-3 mb-5">
+
+                        <img
+                            src="images/logo.jpg"
+                            alt="Favoura"
+                            class="w-12 h-12 object-contain"
+                        >
+
+                        <span class="font-display text-2xl">
+                            Favoura
+                        </span>
+
+                    </div>
+
+                    <p class="text-white/60 leading-7">
+                        Premium chocolate crafted for memorable moments.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Explore
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="products.html">
+                            Chocolates
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <span>
+                            +91 XXXXX XXXXX
+                        </span>
+
+                        <span>
+                            hello@favoura.com
+                        </span>
+
+                        <span>
+                            New Delhi, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Follow Us
+                    </h3>
+
+                    <div class="footer-links">
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                        <a href="#">
+                            WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 mt-14 pt-8">
+
+                <p class="text-sm text-white/40">
+                    © 2026 Favoura. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

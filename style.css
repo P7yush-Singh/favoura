@@ -1,0 +1,701 @@
+/* =========================================================
+   FAVOURA CUSTOM STYLES
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #b9915b;
+    color: #fff;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+#navbar {
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background: rgba(255, 253, 248, 0.94);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 30px rgba(50, 24, 18, 0.06);
+}
+
+.nav-link {
+    position: relative;
+    color: #4a281d;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: #b9915b;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #b9915b;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.mobile-link {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #321812;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.premium-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 25px;
+
+    background: #321812;
+    color: #ffffff;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    letter-spacing: 0.03em;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.premium-button:hover {
+    transform: translateY(-3px);
+    background: #4a281d;
+    box-shadow: 0 12px 30px rgba(50, 24, 18, 0.18);
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    border: 1px solid rgba(50, 24, 18, 0.2);
+
+    color: #321812;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    border-color: #321812;
+    background: #321812;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroContent 1s ease forwards;
+}
+
+.hero-image {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroImage 1.2s ease 0.15s forwards;
+}
+
+.hero-product-image {
+    width: 100%;
+    max-width: 620px;
+    height: 650px;
+
+    object-fit: cover;
+
+    border-radius: 48% 48% 45% 45%;
+
+    display: block;
+    margin: auto;
+
+    box-shadow:
+        0 30px 80px rgba(50, 24, 18, 0.15);
+}
+
+@keyframes heroContent {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroImage {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SECTION TYPOGRAPHY
+========================================================= */
+
+.section-label {
+    color: #b9915b;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3em;
+
+    margin-bottom: 18px;
+}
+
+.section-heading {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.section-text {
+    max-width: 650px;
+
+    color: #806c60;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+.underline-link {
+    color: #321812;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    border-bottom: 1px solid #321812;
+
+    padding-bottom: 5px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.underline-link:hover {
+    color: #b9915b;
+    border-color: #b9915b;
+}
+
+
+/* =========================================================
+   PRODUCT CARDS
+========================================================= */
+
+.product-card {
+    position: relative;
+}
+
+.product-image-wrapper {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f1e8dc;
+
+    aspect-ratio: 1 / 1.05;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.product-card:hover .product-image-wrapper img {
+    transform: scale(1.06);
+}
+
+.product-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(50, 24, 18, 0.55),
+            transparent 55%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-info {
+    padding-top: 20px;
+}
+
+.product-category {
+    color: #b9915b;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.65rem;
+
+    margin-top: 5px;
+}
+
+.product-description {
+    color: #806c60;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    margin-top: 8px;
+}
+
+.product-price {
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-card {
+    padding: 30px;
+
+    border-top: 1px solid rgba(50, 24, 18, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #b9915b;
+}
+
+.feature-number {
+    color: #b9915b;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 35px;
+}
+
+.feature-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 14px;
+}
+
+.feature-card p {
+    color: #806c60;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.review-card {
+    background: white;
+
+    padding: 35px;
+
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid rgba(50, 24, 18, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 50px rgba(50, 24, 18, 0.08);
+}
+
+.review-card p {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.6;
+}
+
+.review-author {
+    color: #806c60;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-title {
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    color: #b9915b;
+
+    margin-bottom: 22px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-product-image {
+        height: 520px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-product-image {
+        height: 430px;
+
+        border-radius: 45% 45% 40% 40%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero-product-image {
+        height: 380px;
+    }
+
+    .premium-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+    .section-heading {
+        font-size: 2.7rem;
+    }
+
+}
+
+/* =========================================================
+   PRODUCT FILTERS
+========================================================= */
+
+.filter-button {
+    padding: 12px 20px;
+
+    border: 1px solid rgba(50, 24, 18, 0.15);
+
+    color: #806c60;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    border-color: #321812;
+    color: #321812;
+}
+
+.filter-button.active {
+    background: #321812;
+    color: white;
+    border-color: #321812;
+}
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-detail-image {
+    background: #f1e8dc;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.product-detail-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-button {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.quantity-button:hover {
+    background: #321812;
+    color: white;
+}
+
+
+/* =========================================================
+   ORDER FORM
+========================================================= */
+
+.form-label {
+    display: block;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #fff;
+
+    border: 1px solid rgba(50, 24, 18, 0.15);
+
+    outline: none;
+
+    color: #321812;
+
+    font-size: 0.9rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #b9915b;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 145, 91, 0.1);
+}
+
+.form-input::placeholder {
+    color: #a2948b;
+}
+
+.form-error {
+    color: #a33a2b;
+
+    font-size: 0.75rem;
+
+    margin-top: 5px;
+
+    min-height: 16px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-label {
+    color: #b9915b;
+
+    font-size: 0.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+}
+
+.social-link {
+    color: #806c60;
+
+    border-bottom: 1px solid rgba(50, 24, 18, 0.2);
+
+    padding-bottom: 3px;
+
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #b9915b;
+}
